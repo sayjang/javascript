@@ -18,6 +18,22 @@ const obj = {0:1,1:2};
 //     console.log(item);
 //  }
 
-for(const item in obj){
+for(const item in obj){ //for...in key 를 반환
     console.log(item);
  }
+
+
+console.clear();
+const iterator = array.values();
+console.log(array);
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+while(true){
+   const item = iterator.next();
+   if(item.done) break;
+   console.log(item.value);
+}
