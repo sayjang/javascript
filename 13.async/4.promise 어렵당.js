@@ -3,9 +3,9 @@ function runInDelay(second){
     //promise( 뒤에 콜백함수 )
     return new Promise((resolve,reject)=>{
         if(!second||second<0){
-            reject(new Error('초가 없음'))
+            reject(new Error('초가 없음'))//실패
         }
-        setTimeout(resolve,second*1000);
+        setTimeout(resolve,second*1000);//성공
     });
 }
 
