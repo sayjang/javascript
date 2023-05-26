@@ -13,7 +13,7 @@
         fetch(
             'https://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json'
         )
-            .then(resonse=>resonse.json()) //프로미스 객체
+            .then(resonse=>resonse.json()) //프로미스 객체 (json이 아님)
             .then(data=>console.log(data));
         
     </script>
