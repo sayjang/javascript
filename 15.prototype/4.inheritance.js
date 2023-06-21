@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>console.log('Hi World!');</script>
-    <script>
-
 //프로토타입을 베이스로 한 객체지향 프로그래밍
 function Animal(name, etc){
     this.name = name;
@@ -27,6 +15,7 @@ function Dog(name, etc, owner){
     this.owner = owner;
 }
 
+//Dog.prototype = Object.create(Object.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 
 Dog.prototype.play = () =>{
@@ -38,6 +27,8 @@ console.log(dog1);
 
 dog1.play();
 dog1.printName();
+
+
 
 function Tiger(name, etc){
     Animal.call(this,name,etc);
@@ -52,6 +43,14 @@ Tiger.prototype.hunt = () =>{
 const tiger1 = new Tiger('호랑이','1');
 tiger1.printName();
 tiger1.hunt();
-    </script>
-</body>
-</html>
+
+
+console.log(dog1 instanceof Dog);
+console.log(dog1 instanceof Animal);
+console.log(dog1 instanceof Tiger);
+
+
+
+console.log(tiger1 instanceof Dog);
+console.log(tiger1 instanceof Animal);
+console.log(tiger1 instanceof Tiger);
